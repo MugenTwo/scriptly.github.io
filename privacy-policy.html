@@ -368,7 +368,7 @@
   </div>
 
   <div class="callout highlight">
-    <p><strong>Summary:</strong> Scriptly is built with your privacy in mind. Your recordings and notes belong to you. We do not sell your data, we do not use your audio to train AI models, and we do not access your microphone in the background.</p>
+    <p><strong>Summary:</strong> Scriptly is built with your privacy in mind. All your recordings and notes are stored exclusively on your device — never on our servers. We do not sell your data, we do not use your audio to train AI models, and we do not access your microphone in the background.</p>
   </div>
 
   <!-- 1. WHO WE ARE -->
@@ -402,8 +402,8 @@
     <h3>2.3 Device and Technical Information</h3>
     <p>We automatically collect certain technical information to maintain App stability, including device model, OS version, App version, preferred language, crash reports, and diagnostic logs. This data is stripped of any content from your recordings or notes.</p>
 
-    <h3>2.4 Account Information (if applicable)</h3>
-    <p>If you create an account, we collect your email address, username, and a securely hashed version of your password. We do not store passwords in plain text.</p>
+    <h3>2.4 Account Information</h3>
+    <p>Scriptly does not require account creation. No account data is collected.</p>
 
     <h3>2.5 What We Do NOT Collect</h3>
     <ul>
@@ -421,7 +421,7 @@
 
     <h3>3.1 Core App Features</h3>
     <ul>
-      <li><strong>Speech-to-Text Transcription:</strong> Your audio is processed to generate text transcriptions. See Section 5 for details on whether processing is local or cloud-based.</li>
+      <li><strong>Speech-to-Text Transcription:</strong> Your audio is processed to generate text transcriptions. See Section 5 for details on third-party API processing.</li>
       <li><strong>AI Filler Word Removal:</strong> Your transcribed text is analyzed by AI to identify and remove filler words (e.g., "um," "uh," "like"). You can review and adjust the results.</li>
       <li><strong>Multi-Language Transcription:</strong> Your selected language preference is used to route transcription to the appropriate language model. We do not use language data for any other purpose.</li>
       <li><strong>MP3 / MP4 Transcription:</strong> Uploaded files are processed for transcription and deleted from our systems once processing is complete, unless you save the transcription yourself.</li>
@@ -442,23 +442,15 @@
     <div class="section-num">Section 04</div>
     <h2>Data Storage &amp; Security</h2>
 
-    <h3>4.1 Local Storage (Default)</h3>
-    <p>By default, your recordings, transcriptions, notes, and folder structure are stored <strong>locally on your device</strong>. Your content is not uploaded to our servers unless you use a feature that specifically requires cloud processing. Local data is protected by your device's built-in security (iOS Data Protection, Android Full Disk Encryption).</p>
+    <h3>4.1 Local Storage</h3>
+    <p>All your recordings, transcriptions, notes, and folder structure are stored <strong>exclusively on your device</strong>. Your content is never uploaded to our servers or any cloud storage. Local data is protected by your device's built-in security (iOS Data Protection, Android Full Disk Encryption).</p>
     <p>If you delete the App, locally stored data is removed in accordance with your device OS behavior.</p>
 
-    <h3>4.2 Cloud Storage (If Enabled)</h3>
-    <p>If you enable cloud backup or account-based sync, your data is transmitted to and stored on servers with the following safeguards:</p>
-    <ul>
-      <li>All data is encrypted in transit using TLS 1.2 or higher.</li>
-      <li>All data is encrypted at rest using AES-256 encryption.</li>
-      <li>Access is limited by strict role-based access controls.</li>
-    </ul>
-
-    <h3>4.3 Temporary Processing Storage</h3>
+    <h3>4.2 Temporary Processing Storage</h3>
     <p>When audio is sent to a third-party transcription API for processing, it may be temporarily stored on that provider's infrastructure. See Section 5 for details on each provider's data handling and retention commitments.</p>
 
     <h3>4.4 Security Measures</h3>
-    <p>We implement industry-standard security practices including end-to-end encryption for data in transit, encryption at rest, access controls limiting employee access to user data, regular security reviews, and incident response procedures. If you discover a security issue, please contact <strong>supp.scriptly@gmail.com</strong> immediately.</p>
+    <p>Since data is stored locally on your device, it is protected by your device's built-in security mechanisms. For any data temporarily processed via third-party APIs (e.g., transcription), we ensure it is transmitted over encrypted connections (TLS 1.2 or higher) and deleted after processing. If you discover a security issue, please contact <strong>supp.scriptly@gmail.com</strong> immediately.</p>
   </div>
 
   <!-- 5. THIRD-PARTY SERVICES -->
@@ -481,11 +473,6 @@
             <td><strong>Speech-to-Text API</strong></td>
             <td>Transcription of audio recordings and uploaded files</td>
             <td>Audio recordings, uploaded MP3/MP4 files</td>
-          </tr>
-          <tr>
-            <td><strong>Cloud Infrastructure</strong></td>
-            <td>Hosting and storage (if cloud sync is enabled)</td>
-            <td>Encrypted user data</td>
           </tr>
           <tr>
             <td><strong>Crash Reporting</strong></td>
@@ -553,14 +540,6 @@
             <td>Per provider's policy (typically deleted after processing)</td>
           </tr>
           <tr>
-            <td><strong>Cloud-synced data (if enabled)</strong></td>
-            <td>Until you delete it + 30-day grace period; removed from backups within 90 days</td>
-          </tr>
-          <tr>
-            <td><strong>Account information</strong></td>
-            <td>Duration of account + 30 days after deletion request</td>
-          </tr>
-          <tr>
             <td><strong>Crash logs and diagnostics</strong></td>
             <td>90-day rolling window, auto-purged</td>
           </tr>
@@ -568,8 +547,7 @@
       </table>
     </div>
 
-    <p>When you delete your Scriptly account, we will delete or anonymize all associated personal data within 30 days, except where retention is required by applicable law.</p>
-    <p><strong>Local Data:</strong> We have no ability to remotely delete data stored on your device. You control local data through the App's deletion features or by uninstalling the App.</p>
+    <p>Since all data is stored locally on your device, we have no ability to remotely delete your recordings, transcriptions, or notes. You control all local data through the App's deletion features or by uninstalling the App.</p>
   </div>
 
   <!-- 7. YOUR RIGHTS -->
@@ -707,7 +685,7 @@
   <div class="policy-section" id="s11">
     <div class="section-num">Section 11</div>
     <h2>International Data Transfers</h2>
-    <p>If you are located in the European Economic Area (EEA) or United Kingdom, your personal data may be transferred to and processed in countries outside the EEA/UK, including the United States, where our service providers operate.</p>
+    <p>All notes and recordings are stored locally on your device. However, if you use transcription features, your audio may be sent to a third-party API provider that operates servers outside your country, including in the United States.</p>
     <p>We ensure all international transfers comply with applicable data protection laws through:</p>
     <ul>
       <li><strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission for transfers to countries without an adequacy decision.</li>
