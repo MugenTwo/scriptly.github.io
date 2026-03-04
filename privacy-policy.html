@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Scriptly</title>
+  <meta name="description" content="Scriptly Privacy Policy – Learn how we collect, use, and protect your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #5B4CF5;
+      --brand-light: #7B6EF8;
+      --bg: #0A0A0F;
+      --bg-card: #13131C;
+      --bg-card2: #1A1A28;
+      --text: #F0EFFF;
+      --text-muted: #8A89A6;
+      --border: rgba(255,255,255,0.07);
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 6%;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: transparent;
+    }
+    .btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+    /* ── LAYOUT ── */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 120px 6% 80px;
+    }
+
+    /* ── HEADER ── */
+    .policy-header {
+      margin-bottom: 52px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(91,76,245,0.1);
+      border: 1px solid rgba(91,76,245,0.25);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--brand-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .policy-header h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .policy-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .policy-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc h3 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .toc li { counter-increment: toc; }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.15s;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(91,76,245,0.6);
+      min-width: 20px;
+    }
+
+    .toc a:hover { color: var(--text); }
+
+    /* ── SECTIONS ── */
+    .policy-section {
+      margin-bottom: 52px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--brand-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+
+    .policy-section h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .policy-section p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .policy-section ul, .policy-section ol {
+      margin: 10px 0 16px 0;
+      padding-left: 24px;
+    }
+
+    .policy-section li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      line-height: 1.65;
+    }
+
+    .policy-section strong { color: var(--text); font-weight: 600; }
+
+    .policy-section a {
+      color: var(--brand-light);
+      text-decoration: none;
+    }
+    .policy-section a:hover { text-decoration: underline; }
+
+    /* ── CALLOUT BOXES ── */
+    .callout {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--brand);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .callout.highlight {
+      background: rgba(91,76,245,0.07);
+      border-color: rgba(91,76,245,0.3);
+      border-left-color: var(--brand);
+    }
+
+    .callout.warning {
+      border-left-color: #f59e0b;
+      background: rgba(245,158,11,0.06);
+      border-color: rgba(245,158,11,0.2);
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 0.875rem !important;
+    }
+
+    /* ── TABLE ── */
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--bg-card2);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    td strong { color: var(--text); }
+
+    /* ── FOOTER ── */
+    .policy-footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .policy-footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .policy-footer a:hover { color: var(--text); }
+
+    .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 5%; }
+      .page-wrapper { padding: 100px 5% 60px; }
+      .policy-footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="8" fill="#5B4CF5"/>
+      <path d="M16 7v10M12 10v4M20 9v6M8 13v2M24 12v3" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <rect x="6" y="20" width="20" height="2.5" rx="1.25" fill="white" opacity="0.7"/>
+      <rect x="9" y="24" width="14" height="2" rx="1" fill="white" opacity="0.4"/>
+    </svg>
+    Scriptly
+  </a>
+  <a href="index.html" class="btn">← Back to Home</a>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <div class="policy-header">
+    <div class="policy-badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="policy-meta">
+      <span>📅 Effective Date: March 1, 2026</span>
+      <span>📋 Version: 1.0</span>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#s1">Who We Are</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">How We Use Your Information</a></li>
+      <li><a href="#s4">Data Storage & Security</a></li>
+      <li><a href="#s5">Third-Party Services</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Your Privacy Rights</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Device Permissions</a></li>
+      <li><a href="#s10">AI Processing Transparency</a></li>
+      <li><a href="#s11">International Data Transfers</a></li>
+      <li><a href="#s12">Changes to This Policy</a></li>
+      <li><a href="#s13">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="callout highlight">
+    <p><strong>Summary:</strong> Scriptly is built with your privacy in mind. Your recordings and notes belong to you. We do not sell your data, we do not use your audio to train AI models, and we do not access your microphone in the background.</p>
+  </div>
+
+  <!-- 1. WHO WE ARE -->
+  <div class="policy-section" id="s1">
+    <div class="section-num">Section 01</div>
+    <h2>Who We Are</h2>
+    <p>This Privacy Policy describes how Scriptly ("we," "us," or "our") collects, uses, stores, and shares your personal information when you use the Scriptly mobile application (the "App") on iOS and Android devices.</p>
+    <p>By using Scriptly, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with our practices, please do not use the App.</p>
+    <p><strong>Contact:</strong> For any privacy-related questions, reach us at <strong>privacy@scriptly.app</strong></p>
+    <p>If you are located in the European Economic Area (EEA), we are the data controller responsible for your personal information under the General Data Protection Regulation (GDPR).</p>
+  </div>
+
+  <!-- 2. INFORMATION WE COLLECT -->
+  <div class="policy-section" id="s2">
+    <div class="section-num">Section 02</div>
+    <h2>Information We Collect</h2>
+
+    <h3>2.1 Audio and Voice Data</h3>
+    <p>Scriptly accesses your device's microphone when you initiate a recording session. We collect:</p>
+    <ul>
+      <li><strong>Live audio input:</strong> Raw audio captured through your microphone during speech-to-text sessions, processed to generate text transcriptions.</li>
+      <li><strong>Uploaded audio and video files:</strong> MP3 and MP4 files you voluntarily import into the App for transcription.</li>
+    </ul>
+    <div class="callout">
+      <p><strong>Important:</strong> Scriptly does <em>not</em> record audio in the background. Microphone access is active only when you explicitly start a recording within the App. We do not build a biometric voice profile or use your voice for speaker identification.</p>
+    </div>
+
+    <h3>2.2 Transcriptions and Notes</h3>
+    <p>We collect the text content of your transcriptions, notes, folder names, and any edits you make — including the results of AI-powered filler word removal. This content is yours.</p>
+
+    <h3>2.3 Device and Technical Information</h3>
+    <p>We automatically collect certain technical information to maintain App stability, including device model, OS version, App version, preferred language, crash reports, and diagnostic logs. This data is stripped of any content from your recordings or notes.</p>
+
+    <h3>2.4 Account Information (if applicable)</h3>
+    <p>If you create an account, we collect your email address, username, and a securely hashed version of your password. We do not store passwords in plain text.</p>
+
+    <h3>2.5 What We Do NOT Collect</h3>
+    <ul>
+      <li>We do not collect government IDs, Social Security numbers, or financial account information.</li>
+      <li>We do not perform facial recognition or build biometric voice profiles.</li>
+      <li>We do not access your contacts, photos, location, or any device data beyond what is listed above.</li>
+      <li>We do not track you across other apps or websites.</li>
+    </ul>
+  </div>
+
+  <!-- 3. HOW WE USE YOUR INFORMATION -->
+  <div class="policy-section" id="s3">
+    <div class="section-num">Section 03</div>
+    <h2>How We Use Your Information</h2>
+
+    <h3>3.1 Core App Features</h3>
+    <ul>
+      <li><strong>Speech-to-Text Transcription:</strong> Your audio is processed to generate text transcriptions. See Section 5 for details on whether processing is local or cloud-based.</li>
+      <li><strong>AI Filler Word Removal:</strong> Your transcribed text is analyzed by AI to identify and remove filler words (e.g., "um," "uh," "like"). You can review and adjust the results.</li>
+      <li><strong>Multi-Language Transcription:</strong> Your selected language preference is used to route transcription to the appropriate language model. We do not use language data for any other purpose.</li>
+      <li><strong>MP3 / MP4 Transcription:</strong> Uploaded files are processed for transcription and deleted from our systems once processing is complete, unless you save the transcription yourself.</li>
+      <li><strong>Note Organization:</strong> Your folder names, note titles, and metadata are stored to provide the folder organization feature.</li>
+      <li><strong>PDF and Word Export:</strong> Notes are converted to PDF or .docx format on-demand. We do not retain copies of exported files.</li>
+    </ul>
+
+    <h3>3.2 App Improvement and Diagnostics</h3>
+    <p>We use crash logs and anonymized diagnostic data to identify and fix bugs. This data never contains content from your recordings or notes.</p>
+
+    <div class="callout highlight">
+      <p><strong>We will NEVER:</strong> sell your data · use your audio to train AI models without your explicit consent · share your recordings with advertisers · access your microphone except when you actively start a recording</p>
+    </div>
+  </div>
+
+  <!-- 4. DATA STORAGE & SECURITY -->
+  <div class="policy-section" id="s4">
+    <div class="section-num">Section 04</div>
+    <h2>Data Storage &amp; Security</h2>
+
+    <h3>4.1 Local Storage (Default)</h3>
+    <p>By default, your recordings, transcriptions, notes, and folder structure are stored <strong>locally on your device</strong>. Your content is not uploaded to our servers unless you use a feature that specifically requires cloud processing. Local data is protected by your device's built-in security (iOS Data Protection, Android Full Disk Encryption).</p>
+    <p>If you delete the App, locally stored data is removed in accordance with your device OS behavior.</p>
+
+    <h3>4.2 Cloud Storage (If Enabled)</h3>
+    <p>If you enable cloud backup or account-based sync, your data is transmitted to and stored on servers with the following safeguards:</p>
+    <ul>
+      <li>All data is encrypted in transit using TLS 1.2 or higher.</li>
+      <li>All data is encrypted at rest using AES-256 encryption.</li>
+      <li>Access is limited by strict role-based access controls.</li>
+    </ul>
+
+    <h3>4.3 Temporary Processing Storage</h3>
+    <p>When audio is sent to a third-party transcription API for processing, it may be temporarily stored on that provider's infrastructure. See Section 5 for details on each provider's data handling and retention commitments.</p>
+
+    <h3>4.4 Security Measures</h3>
+    <p>We implement industry-standard security practices including end-to-end encryption for data in transit, encryption at rest, access controls limiting employee access to user data, regular security reviews, and incident response procedures. If you discover a security issue, please contact <strong>privacy@scriptly.app</strong> immediately.</p>
+  </div>
+
+  <!-- 5. THIRD-PARTY SERVICES -->
+  <div class="policy-section" id="s5">
+    <div class="section-num">Section 05</div>
+    <h2>Third-Party Services</h2>
+    <p>We do not sell your personal information. We share data only with trusted service providers ("data processors") under contractual obligations to protect your data, and only as necessary to operate the App.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Data Shared</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Speech-to-Text API</strong></td>
+            <td>Transcription of audio recordings and uploaded files</td>
+            <td>Audio recordings, uploaded MP3/MP4 files</td>
+          </tr>
+          <tr>
+            <td><strong>Cloud Infrastructure</strong></td>
+            <td>Hosting and storage (if cloud sync is enabled)</td>
+            <td>Encrypted user data</td>
+          </tr>
+          <tr>
+            <td><strong>Crash Reporting</strong></td>
+            <td>Bug detection and App stability</td>
+            <td>Anonymized crash logs, device info</td>
+          </tr>
+          <tr>
+            <td><strong>Analytics</strong> (if enabled)</td>
+            <td>Anonymized App usage insights</td>
+            <td>Anonymized usage events, no content</td>
+          </tr>
+          <tr>
+            <td><strong>Apple App Store / Google Play</strong></td>
+            <td>Payment processing for subscriptions</td>
+            <td>Payment info processed directly by Apple/Google</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>5.1 AI API Data Processing</h3>
+    <p>When you use transcription or filler word removal features, your audio data may be transmitted to a third-party AI API provider. We have contractual Data Processing Agreements (DPAs) with these providers that:</p>
+    <ul>
+      <li>Prohibit them from using your audio or text data to train their AI models.</li>
+      <li>Require deletion of your data within a defined period after processing.</li>
+      <li>Require appropriate security measures and restrict subprocessor sharing.</li>
+    </ul>
+
+    <h3>5.2 Legal Disclosures</h3>
+    <p>We may disclose your information if required by law, court order, or governmental authority, or if we believe in good faith that disclosure is necessary to protect the rights, property, or safety of Scriptly, our users, or the public. We will notify you of such requests where legally permitted.</p>
+
+    <h3>5.3 Business Transfers</h3>
+    <p>In the event of a merger, acquisition, or sale of assets, your personal information may be transferred to the successor entity. We will notify you in advance and provide the opportunity to delete your data before the transfer takes effect.</p>
+  </div>
+
+  <!-- 6. DATA RETENTION -->
+  <div class="policy-section" id="s6">
+    <div class="section-num">Section 06</div>
+    <h2>Data Retention</h2>
+    <p>We retain your data only for as long as necessary to fulfill the purposes described in this policy or as required by law.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Audio recordings (local)</strong></td>
+            <td>Until you delete them from the App or device</td>
+          </tr>
+          <tr>
+            <td><strong>Transcriptions and notes (local)</strong></td>
+            <td>Until you delete them from the App or device</td>
+          </tr>
+          <tr>
+            <td><strong>Uploaded MP3 / MP4 files</strong></td>
+            <td>Deleted within 24 hours of transcription completion</td>
+          </tr>
+          <tr>
+            <td><strong>Audio sent to third-party API</strong></td>
+            <td>Per provider's policy (typically deleted after processing)</td>
+          </tr>
+          <tr>
+            <td><strong>Cloud-synced data (if enabled)</strong></td>
+            <td>Until you delete it + 30-day grace period; removed from backups within 90 days</td>
+          </tr>
+          <tr>
+            <td><strong>Account information</strong></td>
+            <td>Duration of account + 30 days after deletion request</td>
+          </tr>
+          <tr>
+            <td><strong>Crash logs and diagnostics</strong></td>
+            <td>90-day rolling window, auto-purged</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>When you delete your Scriptly account, we will delete or anonymize all associated personal data within 30 days, except where retention is required by applicable law.</p>
+    <p><strong>Local Data:</strong> We have no ability to remotely delete data stored on your device. You control local data through the App's deletion features or by uninstalling the App.</p>
+  </div>
+
+  <!-- 7. YOUR RIGHTS -->
+  <div class="policy-section" id="s7">
+    <div class="section-num">Section 07</div>
+    <h2>Your Privacy Rights</h2>
+
+    <h3>7.1 Rights for All Users</h3>
+    <ul>
+      <li><strong>Access and Delete Your Content:</strong> You can view, edit, and delete all your recordings, transcriptions, and notes directly within the App at any time.</li>
+      <li><strong>Export Your Data:</strong> Export your notes and transcriptions as PDF or Word files from within the App.</li>
+      <li><strong>Revoke Microphone Access:</strong> Revoke Scriptly's microphone access at any time in your device Settings. This disables recording but does not affect other App functions.</li>
+      <li><strong>Contact Us:</strong> Email us at <strong>privacy@scriptly.app</strong> with any privacy questions or requests.</li>
+    </ul>
+
+    <h3>7.2 EEA and UK Users (GDPR)</h3>
+    <p>If you are located in the EEA or United Kingdom, you have the following rights under GDPR:</p>
+    <ul>
+      <li><strong>Right of Access (Art. 15):</strong> Request a copy of all personal data we hold about you.</li>
+      <li><strong>Right to Rectification (Art. 16):</strong> Request correction of inaccurate personal data.</li>
+      <li><strong>Right to Erasure (Art. 17):</strong> Request deletion of your personal data where we no longer have a lawful basis to retain it.</li>
+      <li><strong>Right to Restriction (Art. 18):</strong> Request restriction of processing in certain circumstances.</li>
+      <li><strong>Right to Data Portability (Art. 20):</strong> Receive your personal data in a structured, machine-readable format (JSON or CSV).</li>
+      <li><strong>Right to Object (Art. 21):</strong> Object to processing based on legitimate interests.</li>
+      <li><strong>Right to Withdraw Consent (Art. 7(3)):</strong> Withdraw consent at any time where processing is consent-based, without affecting the lawfulness of prior processing.</li>
+      <li><strong>Right to Lodge a Complaint:</strong> You have the right to contact your local data protection authority. A list of EEA supervisory authorities is available at <a href="https://edpb.europa.eu" target="_blank">edpb.europa.eu</a>. UK users may contact the <a href="https://ico.org.uk" target="_blank">ICO</a>.</li>
+    </ul>
+    <p>We will respond to GDPR requests within 30 days (extendable by 60 days for complex requests with notice).</p>
+
+    <h3>7.3 California Residents (CCPA / CPRA)</h3>
+    <p>California residents have the following rights under the California Consumer Privacy Act and California Privacy Rights Act:</p>
+    <ul>
+      <li><strong>Right to Know:</strong> Request disclosure of the categories and specific pieces of personal information we collect, use, and share about you.</li>
+      <li><strong>Right to Delete:</strong> Request deletion of personal information we have collected, subject to certain exceptions.</li>
+      <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information.</li>
+      <li><strong>Right to Opt-Out of Sale or Sharing:</strong> We do not sell or share your personal information for cross-context behavioral advertising.</li>
+      <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> Your voice recordings are Sensitive Personal Information under CPRA. We use this data only to provide the services you request and not to infer characteristics about you.</li>
+      <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your rights.</li>
+    </ul>
+    <p>To submit a verifiable consumer request, contact us at <strong>privacy@scriptly.app</strong>. We will respond within 45 days (extendable by 45 additional days with notice).</p>
+
+    <h3>7.4 Legal Basis for Processing (GDPR)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Processing Activity</th><th>Legal Basis</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Microphone access for transcription</td><td>Consent (Art. 6(1)(a))</td></tr>
+          <tr><td>AI processing of voice/text</td><td>Consent or Contract (Art. 6(1)(a)/(b))</td></tr>
+          <tr><td>Account management</td><td>Contract (Art. 6(1)(b))</td></tr>
+          <tr><td>Crash logs / diagnostics</td><td>Legitimate Interests (Art. 6(1)(f))</td></tr>
+          <tr><td>Legal compliance</td><td>Legal Obligation (Art. 6(1)(c))</td></tr>
+          <tr><td>Analytics (if opted in)</td><td>Consent (Art. 6(1)(a))</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 8. CHILDREN'S PRIVACY -->
+  <div class="policy-section" id="s8">
+    <div class="section-num">Section 08</div>
+    <h2>Children's Privacy</h2>
+    <p>Scriptly is not directed to children under the age of 13 (or 16 in the EEA under GDPR), and we do not knowingly collect personal information from children under these ages.</p>
+    <p>If we become aware that we have inadvertently collected personal information from a child under 13 without verifiable parental consent, we will take immediate steps to delete that information from our systems.</p>
+    <p>If you believe we may have collected information from a child under 13, please contact us immediately at <strong>privacy@scriptly.app</strong>.</p>
+    <div class="callout warning">
+      <p><strong>Educational Use:</strong> If Scriptly is to be deployed in an educational setting involving students under 13, the institution must obtain verifiable parental consent as required by COPPA before providing student access. Contact us at privacy@scriptly.app to discuss institutional deployment and a Data Processing Agreement.</p>
+    </div>
+  </div>
+
+  <!-- 9. DEVICE PERMISSIONS -->
+  <div class="policy-section" id="s9">
+    <div class="section-num">Section 09</div>
+    <h2>Device Permissions</h2>
+    <p>Scriptly requests the following device permissions:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Microphone</strong></td>
+            <td>Recording audio for speech-to-text transcription</td>
+            <td>Required for recording features</td>
+          </tr>
+          <tr>
+            <td><strong>Storage / Files</strong></td>
+            <td>Accessing MP3/MP4 files for transcription; saving exported PDF/Word files</td>
+            <td>Required for file import and export</td>
+          </tr>
+          <tr>
+            <td><strong>Internet / Network</strong></td>
+            <td>Sending audio to transcription API; cloud sync (if enabled)</td>
+            <td>Required for cloud features; local-only use may not require it</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Microphone Access:</strong> Scriptly only activates your microphone when you explicitly press the record button within the App. We never record audio passively, in the background, or when the App is closed.</p>
+    <p>On iOS 14+ and Android 12+, your device displays a visual microphone activity indicator whenever the microphone is in use — you can always verify that Scriptly is not recording in the background.</p>
+    <p>You can revoke any permission at any time in your device Settings. Revoking microphone access disables recording but does not affect your ability to view notes or access previously created transcriptions.</p>
+  </div>
+
+  <!-- 10. AI PROCESSING -->
+  <div class="policy-section" id="s10">
+    <div class="section-num">Section 10</div>
+    <h2>AI Processing Transparency</h2>
+    <p>Scriptly uses artificial intelligence to power several features. We believe in transparency about how AI interacts with your data.</p>
+
+    <h3>10.1 Speech-to-Text Transcription</h3>
+    <p>Your audio is processed by an AI model to convert speech to text. This AI performs only the mechanical task of transcription — it does not make decisions about you, assess your emotions or personality, or build a persistent profile of your voice.</p>
+
+    <h3>10.2 Filler Word Removal</h3>
+    <p>Our AI analyzes your transcribed text to identify and flag common filler words and phrases (e.g., "um," "uh," "like," "you know"). This processing:</p>
+    <ul>
+      <li>Produces suggestions that you can review and accept or reject.</li>
+      <li>Does not profile you or build a model of your speech patterns beyond the immediate session.</li>
+      <li>Does not make any consequential decisions about you.</li>
+    </ul>
+
+    <h3>10.3 No AI Training on Your Data</h3>
+    <div class="callout highlight">
+      <p>We do not use your audio recordings, transcriptions, or notes to train, fine-tune, or improve any AI model — ours or any third party's — without your separate, explicit, opt-in consent. Our agreements with third-party AI API providers contractually prohibit them from using your data for model training.</p>
+    </div>
+
+    <h3>10.4 Multi-Language Support</h3>
+    <p>Language detection and multi-language transcription is handled based on your explicit language selection in the App. No language profiling is conducted beyond routing your audio to the appropriate language model.</p>
+  </div>
+
+  <!-- 11. INTERNATIONAL TRANSFERS -->
+  <div class="policy-section" id="s11">
+    <div class="section-num">Section 11</div>
+    <h2>International Data Transfers</h2>
+    <p>If you are located in the European Economic Area (EEA) or United Kingdom, your personal data may be transferred to and processed in countries outside the EEA/UK, including the United States, where our service providers operate.</p>
+    <p>We ensure all international transfers comply with applicable data protection laws through:</p>
+    <ul>
+      <li><strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission for transfers to countries without an adequacy decision.</li>
+      <li><strong>Data Processing Agreements (DPAs)</strong> with all third-party processors that include appropriate data transfer safeguards.</li>
+      <li>Ongoing monitoring of changes to international transfer frameworks.</li>
+    </ul>
+    <p>You may request a copy of the relevant safeguards we have in place by contacting us at <strong>privacy@scriptly.app</strong>.</p>
+  </div>
+
+  <!-- 12. CHANGES -->
+  <div class="policy-section" id="s12">
+    <div class="section-num">Section 12</div>
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy periodically. When we make material changes, we will:</p>
+    <ul>
+      <li>Update the "Effective Date" at the top of this policy.</li>
+      <li>Notify you via in-App notification and/or email at least 30 days before changes take effect.</li>
+      <li>For changes that materially affect how we process audio or voice data, request fresh consent where required by law.</li>
+    </ul>
+    <p>Your continued use of Scriptly after the effective date of a revised policy constitutes your acceptance of the changes. If you do not agree, you should stop using the App and may request deletion of your data by contacting us.</p>
+  </div>
+
+  <!-- 13. CONTACT -->
+  <div class="policy-section" id="s13">
+    <div class="section-num">Section 13</div>
+    <h2>Contact Us</h2>
+    <p>For questions, concerns, or requests regarding this Privacy Policy or your personal data:</p>
+    <ul>
+      <li><strong>Email:</strong> privacy@scriptly.app</li>
+      <li><strong>Subject line:</strong> "Privacy Request – [Your Name]"</li>
+    </ul>
+    <p>We aim to respond to all privacy inquiries within 30 business days.</p>
+    <p><strong>EEA / UK Users:</strong> If we have not adequately addressed your concern, you have the right to contact your local data protection authority:</p>
+    <ul>
+      <li>EU Supervisory Authorities: <a href="https://edpb.europa.eu" target="_blank">edpb.europa.eu</a></li>
+      <li>UK (ICO): <a href="https://ico.org.uk" target="_blank">ico.org.uk</a></li>
+    </ul>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="policy-footer">
+    <a href="index.html">← Back to Scriptly</a>
+    <p class="footer-copy">© 2026 Scriptly. All rights reserved.</p>
+  </div>
+
+</div>
+</body>
+</html>
