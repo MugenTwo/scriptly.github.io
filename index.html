@@ -604,7 +604,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: gap;
+      flex-wrap: wrap;
       gap: 20px;
     }
 
@@ -638,6 +638,69 @@
       color: var(--text-muted);
     }
 
+    /* ── WAITLIST ── */
+    #waitlist {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .waitlist-box {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .waitlist-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fbbf24;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .waitlist-box h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .waitlist-box h2 span {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .waitlist-box > p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 36px;
+    }
+
+    .waitlist-form-container {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .waitlist-form-container iframe {
+      width: 100%;
+      min-height: 520px;
+      border: none;
+      display: block;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 14px 5%; }
@@ -663,9 +726,10 @@
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#export">Export</a></li>
     <li><a href="#languages">Languages</a></li>
+    <li><a href="#waitlist">Early Access</a></li>
     <li><a href="privacy-policy.html">Privacy</a></li>
   </ul>
-  <!-- <a href="#cta" class="btn btn-primary">Download Free</a> -->
+  <a href="#waitlist" class="btn btn-primary">Get Free Lifetime Access</a>
 </nav>
 
 <!-- HERO -->
@@ -676,10 +740,10 @@
   <h1>Your Voice,<br /><span>Perfectly Transcribed</span></h1>
   <p>Scriptly turns speech into clean, organized notes in seconds. AI removes filler words, supports dozens of languages, and exports beautifully.</p>
   <div class="hero-actions">
-    <!-- <a href="#cta" class="btn btn-primary">
+    <a href="#cta" class="btn btn-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
       App Store
-    </a> -->
+    </a>
     <a href="#cta" class="btn btn-outline">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.28.16.61.16.89 0L16.65 12 3.18.24C2.9.08 2.56.08 2.28.24c-.29.16-.46.46-.46.79v22c0 .32.17.62.46.78l.9-.05zM16.65 12L19.79 8.59l-4.04-2.3L12.6 9.46 16.65 12zm3.14 3.41L12.6 14.54l3.15 3.17 4.04-2.3-3.14-3.41 3.14 3.41zM3.18.24l13.47 7.66L12.6 12l4.05 4.1L3.18 23.76V.24z"/></svg>
       Google Play
@@ -862,15 +926,15 @@
 <section id="cta">
   <div class="cta-box">
     <h2>Start capturing ideas<br />with your voice</h2>
-    <p>Download Scriptly for free and turn every spoken word into a polished note.</p>
+    <p>Download Scriptly and turn every spoken word into a polished note. Join the waitlist for free lifetime access.</p>
     <div class="store-badges">
-      <!-- <a href="#" class="store-badge">
+      <a href="#" class="store-badge">
         <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         <div class="store-badge-text">
           <small>Download on the</small>
           <strong>App Store</strong>
         </div>
-      </a> -->
+      </a>
       <a href="#" class="store-badge">
         <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.28.16.61.16.89 0L16.65 12 3.18.24C2.9.08 2.56.08 2.28.24c-.29.16-.46.46-.46.79v22c0 .32.17.62.46.78l.9-.05zM16.65 12L19.79 8.59l-4.04-2.3L12.6 9.46 16.65 12zm3.14 3.41L12.6 14.54l3.15 3.17 4.04-2.3-3.14-3.41 3.14 3.41zM3.18.24l13.47 7.66L12.6 12l4.05 4.1L3.18 23.76V.24z"/></svg>
         <div class="store-badge-text">
@@ -879,23 +943,34 @@
         </div>
       </a>
     </div>
+    <div style="margin-top: 24px;">
+      <a href="#waitlist" class="btn btn-outline" style="margin: 0 auto;">★ Get Free Lifetime Access — Join Waitlist</a>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section id="waitlist">
+  <div class="waitlist-box">
+    <div class="waitlist-badge">★ Limited Time</div>
+    <h2>Get <span>Free Lifetime Access</span></h2>
+    <p>Join the early access waitlist and unlock Scriptly for free — forever. No credit card required.</p>
+    <div class="waitlist-form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeBcayCcTJHZuwa5Hb8m_pIDCDKvzY1O5pYgPkpBVft8rClw/viewform?embedded=true" title="Scriptly Early Access Waitlist" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <a href="#" class="footer-logo">
-    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="8" fill="#5B4CF5"/>
-      <path d="M16 7v10M12 10v4M20 9v6M8 13v2M24 12v3" stroke="white" stroke-width="2" stroke-linecap="round"/>
-      <rect x="6" y="20" width="20" height="2.5" rx="1.25" fill="white" opacity="0.7"/>
-      <rect x="9" y="24" width="14" height="2" rx="1" fill="white" opacity="0.4"/>
-    </svg>
+    <img src="square-app-icon.jpg" alt="Scriptly" style="width:28px;height:28px;border-radius:7px;">
     Scriptly
   </a>
   <ul class="footer-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#waitlist">Early Access</a></li>
     <li><a href="privacy-policy.html">Privacy Policy</a></li>
   </ul>
   <p class="footer-copy">© 2026 Scriptly. All rights reserved.</p>
