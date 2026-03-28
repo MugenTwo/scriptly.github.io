@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions – Scriptly</title>
+  <meta name="description" content="Scriptly Terms and Conditions – One-time purchase, on-device AI note-taking app." />
+  <link rel="icon" type="image/jpeg" href="square-app-icon.jpg" />
+  <link rel="apple-touch-icon" href="square-app-icon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #5B4CF5;
+      --brand-light: #7B6EF8;
+      --bg: #0A0A0F;
+      --bg-card: #13131C;
+      --bg-card2: #1A1A28;
+      --text: #F0EFFF;
+      --text-muted: #8A89A6;
+      --border: rgba(255,255,255,0.07);
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 6%;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: transparent;
+    }
+    .btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+    /* ── LAYOUT ── */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 120px 6% 80px;
+    }
+
+    /* ── HEADER ── */
+    .policy-header {
+      margin-bottom: 52px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(91,76,245,0.1);
+      border: 1px solid rgba(91,76,245,0.25);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--brand-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .policy-header h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .policy-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .policy-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc h3 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .toc li { counter-increment: toc; }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.15s;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(91,76,245,0.6);
+      min-width: 20px;
+    }
+
+    .toc a:hover { color: var(--text); }
+
+    /* ── SECTIONS ── */
+    .policy-section {
+      margin-bottom: 52px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--brand-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+
+    .policy-section h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .policy-section p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .policy-section ul, .policy-section ol {
+      margin: 10px 0 16px 0;
+      padding-left: 24px;
+    }
+
+    .policy-section li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      line-height: 1.65;
+    }
+
+    .policy-section strong { color: var(--text); font-weight: 600; }
+
+    .policy-section a {
+      color: var(--brand-light);
+      text-decoration: none;
+    }
+    .policy-section a:hover { text-decoration: underline; }
+
+    /* ── CALLOUT BOXES ── */
+    .callout {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--brand);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .callout.highlight {
+      background: rgba(91,76,245,0.07);
+      border-color: rgba(91,76,245,0.3);
+      border-left-color: var(--brand);
+    }
+
+    .callout.warning {
+      border-left-color: #f59e0b;
+      background: rgba(245,158,11,0.06);
+      border-color: rgba(245,158,11,0.2);
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 0.875rem !important;
+    }
+
+    /* ── FOOTER ── */
+    .policy-footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .policy-footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .policy-footer a:hover { color: var(--text); }
+
+    .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 5%; }
+      .page-wrapper { padding: 100px 5% 60px; }
+      .policy-footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="square-app-icon.jpg" alt="Scriptly" style="width:32px;height:32px;border-radius:8px;">
+    Scriptly
+  </a>
+  <a href="index.html" class="btn">← Back to Home</a>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <div class="policy-header">
+    <div class="policy-badge">Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <div class="policy-meta">
+      <span>📅 Effective Date: March 28, 2026</span>
+      <span>📋 Version: 1.0</span>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#s1">Acceptance of Terms</a></li>
+      <li><a href="#s2">About the App</a></li>
+      <li><a href="#s3">One-Time Purchase</a></li>
+      <li><a href="#s4">Permitted Use</a></li>
+      <li><a href="#s5">AI Features &amp; Accuracy Disclaimer</a></li>
+      <li><a href="#s6">Intellectual Property</a></li>
+      <li><a href="#s7">Disclaimer of Warranties</a></li>
+      <li><a href="#s8">Limitation of Liability</a></li>
+      <li><a href="#s9">Changes to the App or Terms</a></li>
+      <li><a href="#s10">Governing Law</a></li>
+      <li><a href="#s11">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="callout highlight">
+    <p><strong>Summary:</strong> Scriptly is a one-time purchase AI note-taking app. All processing happens on your device. AI-generated transcriptions and summaries may not always be accurate — always verify important content. By using the app you agree to these terms.</p>
+  </div>
+
+  <!-- 1. ACCEPTANCE -->
+  <div class="policy-section" id="s1">
+    <div class="section-num">Section 01</div>
+    <h2>Acceptance of Terms</h2>
+    <p>By downloading, installing, or using the Scriptly mobile application (the "App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+    <p>These Terms apply to all users of the App, regardless of how the App was obtained.</p>
+  </div>
+
+  <!-- 2. ABOUT THE APP -->
+  <div class="policy-section" id="s2">
+    <div class="section-num">Section 02</div>
+    <h2>About the App</h2>
+    <p>Scriptly is an AI-powered note-taking application for iOS and Android that includes the following features:</p>
+    <ul>
+      <li><strong>Real-Time Speech to Text</strong> — Transcribe live speech as you talk.</li>
+      <li><strong>AI Filler Word Removal</strong> — Automatically remove filler words such as "um", "uh", and "like" from transcriptions.</li>
+      <li><strong>Multi-Language Support</strong> — Transcribe speech in dozens of languages.</li>
+      <li><strong>Smart Note Editor</strong> — Edit, format, and organize your transcriptions.</li>
+      <li><strong>Folders &amp; Organization</strong> — Organize notes and recordings into custom folders.</li>
+      <li><strong>MP3 Transcription</strong> — Import MP3 audio files and generate transcriptions.</li>
+      <li><strong>MP4 Video Transcription</strong> — Extract and transcribe audio from MP4 video files.</li>
+      <li><strong>PDF &amp; Word Export</strong> — Export notes as PDF or .docx Word documents.</li>
+    </ul>
+    <p>All features operate entirely on your device. No audio, transcriptions, or notes are transmitted to external servers.</p>
+  </div>
+
+  <!-- 3. ONE-TIME PURCHASE -->
+  <div class="policy-section" id="s3">
+    <div class="section-num">Section 03</div>
+    <h2>One-Time Purchase</h2>
+    <p>Scriptly is sold as a <strong>one-time purchase</strong>. There are no recurring subscriptions, monthly fees, or hidden charges. Once you purchase the App, you have access to all features available at the time of purchase for as long as you keep the App installed.</p>
+
+    <div class="callout warning">
+      <p><strong>No Refunds:</strong> All purchases are processed by Apple (App Store) or Google (Google Play). Refund requests are subject to their respective refund policies. We do not have the ability to issue refunds directly.</p>
+    </div>
+
+    <p>We reserve the right to introduce new optional paid features in future versions of the App. Existing purchasers will not be charged for features available at the time of their purchase.</p>
+    <p>We do not guarantee that specific features will be available indefinitely. Features may be modified, removed, or replaced in future updates at our sole discretion.</p>
+  </div>
+
+  <!-- 4. PERMITTED USE -->
+  <div class="policy-section" id="s4">
+    <div class="section-num">Section 04</div>
+    <h2>Permitted Use</h2>
+    <p>You may use Scriptly for personal, educational, or professional note-taking purposes. You agree not to:</p>
+    <ul>
+      <li>Reverse engineer, decompile, or attempt to extract the source code of the App.</li>
+      <li>Reproduce, redistribute, or resell the App or any part of it.</li>
+      <li>Use the App in any way that violates applicable laws or regulations.</li>
+      <li>Record or transcribe individuals without their knowledge or consent, where required by law.</li>
+    </ul>
+    <p>You are solely responsible for any content you create, record, or store using the App, and for ensuring that your use complies with all applicable laws, including those governing recording consent in your jurisdiction.</p>
+  </div>
+
+  <!-- 5. AI DISCLAIMER -->
+  <div class="policy-section" id="s5">
+    <div class="section-num">Section 05</div>
+    <h2>AI Features &amp; Accuracy Disclaimer</h2>
+
+    <div class="callout warning">
+      <p><strong>Important:</strong> AI-generated transcriptions, filler word removals, and any summaries produced by the App may contain errors, omissions, or inaccuracies. Do not rely on AI output for critical, legal, medical, or professional decisions without independent verification.</p>
+    </div>
+
+    <p>The App uses on-device AI models to transcribe speech and process audio. By their nature, these models are not perfect and their accuracy depends on factors including:</p>
+    <ul>
+      <li>Audio quality, background noise, and recording conditions.</li>
+      <li>Accents, dialects, and speaking speed.</li>
+      <li>Technical or domain-specific vocabulary.</li>
+      <li>The language being spoken.</li>
+    </ul>
+    <p><strong>We make no warranty</strong> that any transcription, filler word removal, or AI-generated output will be accurate, complete, or error-free. You are responsible for reviewing and verifying all AI-generated content before relying on it.</p>
+    <p>We are not liable for any loss, harm, or consequence arising from inaccurate AI output produced by the App.</p>
+  </div>
+
+  <!-- 6. INTELLECTUAL PROPERTY -->
+  <div class="policy-section" id="s6">
+    <div class="section-num">Section 06</div>
+    <h2>Intellectual Property</h2>
+    <p>Scriptly and all associated branding, design, code, and content are the intellectual property of the developer. All rights are reserved.</p>
+    <p>Your recordings, transcriptions, and notes remain your own. We claim no ownership over any content you create using the App.</p>
+  </div>
+
+  <!-- 7. DISCLAIMER OF WARRANTIES -->
+  <div class="policy-section" id="s7">
+    <div class="section-num">Section 07</div>
+    <h2>Disclaimer of Warranties</h2>
+    <p>The App is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranty of any kind, express or implied. To the fullest extent permitted by law, we disclaim all warranties including, but not limited to:</p>
+    <ul>
+      <li>Warranties of merchantability or fitness for a particular purpose.</li>
+      <li>Warranties that the App will be uninterrupted, error-free, or free of bugs.</li>
+      <li>Warranties regarding the accuracy or reliability of any AI-generated output.</li>
+    </ul>
+    <p>Your use of the App is at your own risk. We do not guarantee that the App will function on all devices or versions of iOS and Android.</p>
+  </div>
+
+  <!-- 8. LIMITATION OF LIABILITY -->
+  <div class="policy-section" id="s8">
+    <div class="section-num">Section 08</div>
+    <h2>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, the developer of Scriptly shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+    <ul>
+      <li>Loss of data, recordings, or notes.</li>
+      <li>Errors or inaccuracies in AI-generated transcriptions or summaries.</li>
+      <li>Any decisions made based on content produced by the App.</li>
+      <li>Damage to your device resulting from use of the App.</li>
+    </ul>
+    <p>In no event shall our total liability to you exceed the amount you paid for the App.</p>
+  </div>
+
+  <!-- 9. CHANGES -->
+  <div class="policy-section" id="s9">
+    <div class="section-num">Section 09</div>
+    <h2>Changes to the App or Terms</h2>
+    <p>We reserve the right to update these Terms at any time. When we do, we will update the effective date at the top of this page. Continued use of the App after changes are posted constitutes acceptance of the updated Terms.</p>
+    <p>We may update, modify, or discontinue the App or any of its features at any time without prior notice. We are not obligated to provide updates or maintain compatibility with future operating system versions.</p>
+  </div>
+
+  <!-- 10. GOVERNING LAW -->
+  <div class="policy-section" id="s10">
+    <div class="section-num">Section 10</div>
+    <h2>Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with applicable law. Any disputes arising from these Terms or your use of the App shall be resolved in the jurisdiction where the developer is located, to the extent permitted by law.</p>
+  </div>
+
+  <!-- 11. CONTACT -->
+  <div class="policy-section" id="s11">
+    <div class="section-num">Section 11</div>
+    <h2>Contact</h2>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> supp.scriptly@gmail.com</li>
+    </ul>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="policy-footer">
+    <a href="index.html">← Back to Scriptly</a>
+    <p class="footer-copy">© 2026 Scriptly. All rights reserved.</p>
+  </div>
+
+</div>
+</body>
+</html>
