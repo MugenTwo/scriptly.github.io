@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scriptly – AI-Powered Speech to Text & Notes</title>
-  <meta name="description" content="Scriptly turns your voice into organized notes. AI-powered transcription, filler word removal, multi-language support, and seamless export." />
+  <title>Scriptly – Privacy-First AI Note Taking & Speech to Text</title>
+  <meta name="description" content="Scriptly is your all-in-one privacy-first AI smart note-taking assistant. Transform your voice into polished notes with transcription, AI summary, chat with notes, and PDF/Word export — all on your device. No subscriptions." />
   <link rel="icon" type="image/jpeg" href="square-app-icon.jpg" />
   <link rel="apple-touch-icon" href="square-app-icon.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -701,6 +701,78 @@
       display: block;
     }
 
+    /* ── PRIVACY SECTION ── */
+    #privacy {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .privacy-label {
+      background: rgba(16,185,129,0.1) !important;
+      border-color: rgba(16,185,129,0.3) !important;
+      color: #34d399 !important;
+    }
+
+    .privacy-highlight {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .privacy-point {
+      background: var(--bg);
+      border: 1px solid rgba(16,185,129,0.15);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      text-align: center;
+      transition: all 0.25s;
+    }
+
+    .privacy-point:hover {
+      border-color: rgba(16,185,129,0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(16,185,129,0.08);
+    }
+
+    .privacy-point .privacy-icon { font-size: 2rem; margin-bottom: 14px; }
+
+    .privacy-point h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .privacy-point p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .feature-card.privacy-card {
+      border-color: rgba(16,185,129,0.25);
+      background: linear-gradient(135deg, rgba(16,185,129,0.06) 0%, var(--bg-card) 100%);
+    }
+
+    .feature-card.privacy-card .feature-icon {
+      background: rgba(16,185,129,0.12);
+      border-color: rgba(16,185,129,0.25);
+    }
+
+    .feature-card.privacy-card:hover {
+      border-color: rgba(16,185,129,0.45);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .nav-links { display: none; }
@@ -726,11 +798,11 @@
   </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
+    <li><a href="#privacy">Privacy</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
-    <li><a href="#export">Export</a></li>
     <li><a href="#languages">Languages</a></li>
     <li><a href="#waitlist">Early Access</a></li>
-    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
   </ul>
   <a href="#waitlist" class="btn btn-primary">Free Early Access</a>
 </nav>
@@ -738,10 +810,14 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge">
-    <span>✦</span> AI-Powered Speech to Text
+    <span>🔒</span> Privacy-First AI Note Taking
   </div>
-  <h1>Your Voice,<br /><span>Perfectly Transcribed</span></h1>
-  <p>Scriptly turns speech into clean, organized notes in seconds. AI removes filler words, supports dozens of languages, and exports beautifully.</p>
+  <h1>Transform Your Voice<br /><span>Into Polished Notes</span></h1>
+  <p>Scriptly is your all-in-one privacy-first AI smart note-taking assistant — transcription, AI summary, and chat with your notes, all without your data ever leaving your device.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;">
+    <span style="display:inline-flex;align-items:center;gap:5px;padding:5px 14px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:100px;font-size:0.78rem;font-weight:600;color:#34d399;">🔒 Data stays on your device</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;padding:5px 14px;background:rgba(91,76,245,0.1);border:1px solid rgba(91,76,245,0.3);border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--brand-light);">✦ No monthly subscription</span>
+  </div>
   <div class="hero-actions">
     <a href="#cta" class="btn btn-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -791,9 +867,10 @@
           <div class="phone-line long"></div>
           <div class="phone-line short"></div>
         </div>
-        <div style="margin-top: 14px; display: flex; gap: 6px; justify-content: center;">
+        <div style="margin-top: 14px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap;">
           <div class="phone-tag">✦ AI Cleaned</div>
-          <div class="phone-tag">EN</div>
+          <div class="phone-tag">🤖 Summary</div>
+          <div class="phone-tag">🔒 Private</div>
         </div>
       </div>
     </div>
@@ -804,49 +881,49 @@
 <section id="features">
   <div class="features-header">
     <div class="section-label">✦ Features</div>
-    <h2 class="section-title">Everything you need<br />for voice notes</h2>
-    <p class="section-sub">From live recording to polished documents — Scriptly handles it all.</p>
+    <h2 class="section-title">Everything you need<br />for smarter note taking</h2>
+    <p class="section-sub">From live recording to AI-powered summaries — Scriptly handles it all, privately on your device.</p>
   </div>
   <div class="features-grid">
+    <div class="feature-card privacy-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Privacy First</h3>
+      <p>Your voice and data stay yours. All processing happens on-device — no cloud uploads, no servers, no subscriptions.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <h3>AI Summary</h3>
+      <p>Just write or record your notes and AI will distill them into key points. Perfect for summarizing school lectures, meetings, and more.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💬</div>
+      <h3>Chat with Your Notes</h3>
+      <p>Ask questions about your notes and PDFs or Word documents. Get instant AI-powered answers without leaving the app.</p>
+    </div>
     <div class="feature-card">
       <div class="feature-icon">🎙️</div>
       <h3>Real-Time Speech to Text</h3>
-      <p>Instantly transcribe your speech as you talk. Accurate, fast, and hands-free — just tap and speak.</p>
+      <p>No more manual typing. Capture your thoughts hands-free with powerful voice recognition as you speak.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">✨</div>
       <h3>AI Filler Word Removal</h3>
-      <p>Automatically removes "um", "uh", "like", and other filler words so your transcription reads clean and professional.</p>
+      <p>Tired of "um," "uh," and "like"? Our AI editor automatically removes filler words, leaving clean, professional text.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🌍</div>
       <h3>Multi-Language Support</h3>
-      <p>Transcribe in dozens of languages with high accuracy. Switch languages on the fly without missing a word.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📝</div>
-      <h3>Smart Note Taking</h3>
-      <p>Edit, format, and enrich your transcriptions with a powerful note editor. Add headings, lists, and formatting.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📁</div>
-      <h3>Folders & Organization</h3>
-      <p>Keep recordings and notes organized with custom folders. Find anything instantly with built-in search.</p>
+      <p>Break language barriers. Transcribe in dozens of languages with high accuracy and switch on the fly.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🎵</div>
-      <h3>MP3 Transcription</h3>
-      <p>Import any MP3 audio file and get a full transcription in seconds. Perfect for interviews and podcasts.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎬</div>
-      <h3>MP4 Video Transcription</h3>
-      <p>Extract and transcribe audio from MP4 video files. Turn meetings, lectures, and videos into text.</p>
+      <h3>MP3 & MP4 Transcription</h3>
+      <p>Upload audio or video files directly. Scriptly is the ultimate transcription tool for podcasters, journalists, and students.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">📤</div>
       <h3>PDF & Word Export</h3>
-      <p>Export any note as a beautifully formatted PDF or Word document, rendered from Markdown. Share instantly.</p>
+      <p>Export formatted notes as PDF or Word documents. Perfect for sharing meeting minutes, essays, or interview transcripts.</p>
     </div>
   </div>
 </section>
@@ -855,10 +932,10 @@
 <section id="how-it-works">
   <div style="text-align: center; margin-bottom: 60px;">
     <div class="section-label">✦ How It Works</div>
-    <h2 class="section-title">Three steps to perfect notes</h2>
-    <p class="section-sub" style="margin: 0 auto;">Simple, fast, and intuitive — no learning curve required.</p>
+    <h2 class="section-title">Four steps to perfect notes</h2>
+    <p class="section-sub" style="margin: 0 auto;">Simple, fast, and intuitive — your voice becomes polished notes in seconds.</p>
   </div>
-  <div class="steps-container">
+  <div class="steps-container" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
     <div class="step">
       <div class="step-num">🎙️</div>
       <h3>1. Record or Import</h3>
@@ -867,11 +944,16 @@
     <div class="step">
       <div class="step-num">🤖</div>
       <h3>2. AI Transcribes & Cleans</h3>
-      <p>Scriptly's AI transcribes your audio and removes filler words automatically.</p>
+      <p>Scriptly transcribes your audio and automatically removes filler words.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">✦</div>
+      <h3>3. AI Summarizes</h3>
+      <p>Get instant AI-generated key points from your notes. Ask questions and chat with your content.</p>
     </div>
     <div class="step">
       <div class="step-num">📤</div>
-      <h3>3. Edit, Organize & Export</h3>
+      <h3>4. Edit & Export</h3>
       <p>Refine your notes, organize into folders, and export as PDF or Word.</p>
     </div>
   </div>
@@ -925,11 +1007,42 @@
   </div>
 </section>
 
+<!-- PRIVACY -->
+<section id="privacy">
+  <div style="text-align: center; margin-bottom: 60px;">
+    <div class="section-label privacy-label">🔒 Privacy First</div>
+    <h2 class="section-title">Your data never leaves<br /><span class="privacy-highlight">your device</span></h2>
+    <p class="section-sub" style="margin: 0 auto;">No cloud uploads. No servers. No surveillance. Scriptly is built from the ground up with your privacy as the foundation — and without any monthly or yearly AI subscriptions.</p>
+  </div>
+  <div class="privacy-grid">
+    <div class="privacy-point">
+      <div class="privacy-icon">📱</div>
+      <h3>100% On-Device</h3>
+      <p>All AI processing happens locally on your device. Your voice, notes, and data never touch a server.</p>
+    </div>
+    <div class="privacy-point">
+      <div class="privacy-icon">💸</div>
+      <h3>No Subscriptions</h3>
+      <p>Pay once, own forever. No monthly fees, no yearly renewals — just powerful AI at a one-time price.</p>
+    </div>
+    <div class="privacy-point">
+      <div class="privacy-icon">🚫</div>
+      <h3>No Tracking</h3>
+      <p>We don't track your usage, sell your data, or show ads. Your notes are yours, full stop.</p>
+    </div>
+    <div class="privacy-point">
+      <div class="privacy-icon">🛡️</div>
+      <h3>Transparent Policy</h3>
+      <p>Simple, honest, and open. <a href="privacy-policy.html" style="color:#34d399;text-decoration:none;">Read our privacy policy</a> to see exactly how we protect you.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section id="cta">
   <div class="cta-box">
-    <h2>Start capturing ideas<br />with your voice</h2>
-    <p>Download Scriptly and turn every spoken word into a polished note. Join the waitlist for free lifetime access.</p>
+    <h2>Transform your voice<br />into polished notes</h2>
+    <p>Download Scriptly — the privacy-first AI note-taking assistant. Transcribe, summarize, and chat with your notes, all on your device with no subscriptions.</p>
     <div class="store-badges">
       <a href="#" class="store-badge">
         <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
